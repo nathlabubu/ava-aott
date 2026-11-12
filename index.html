@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competências do curso: Magia da Amizade | AVA - Escola de Equestria</title>
+    <!-- Bootstrap 5 & FontAwesome para reproduzir o tema Boost do Moodle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --mlp-purple: #6f42c1;
+            --mlp-pink: #e83e8c;
+            --mlp-light-bg: #fdf8ff;
+        }
+        body {
+            background-color: var(--mlp-light-bg);
+            padding-top: 60px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .navbar {
+            border-bottom: 2px solid var(--mlp-pink);
+            box-shadow: 0 2px 6px rgba(111, 66, 193, 0.1);
+        }
+        .navbar-brand {
+            color: var(--mlp-purple) !important;
+            font-weight: 700;
+        }
+        .sidebar-drawer {
+            width: 260px;
+            position: fixed;
+            top: 58px;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            border-right: 1px solid #dee2e6;
+            padding: 1rem;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .main-content {
+            margin-left: 260px;
+            padding: 2rem;
+        }
+        @media (max-width: 768px) {
+            .sidebar-drawer { display: none; }
+            .main-content { margin-left: 0; }
+        }
+        .competency-card {
+            border-left: 5px solid var(--mlp-purple);
+            transition: transform 0.15s ease;
+        }
+        .competency-card:hover {
+            transform: translateY(-2px);
+        }
+        .badge-cutiemark {
+            background-color: #f3e8ff;
+            color: var(--mlp-purple);
+            border: 1px solid #d8b4fe;
+        }
+        .btn-mlp {
+            background-color: var(--mlp-purple);
+            color: #fff;
+        }
+        .btn-mlp:hover {
+            background-color: #59339d;
+            color: #fff;
+        }
+    </style>
+</head>
+<body id="page-admin-tool-lp-coursecompetencies" class="format-topics pagelayout-incourse">
+
+    <!-- Barra de Navegação Superior (Baseada no seu código) -->
+    <nav class="navbar fixed-top bg-white navbar-expand" aria-label="Navegação no site">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
+                <i class="fa-solid fa-star text-warning me-2"></i> AVA - Escola da Amizade
+            </a>
+
+            <div class="primary-navigation">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Página inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Painel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-primary" href="#">Meus cursos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Menu do Usuário / Notificações -->
+            <div id="usernavigation" class="navbar-nav ms-auto align-items-center gap-3">
+                <div class="position-relative" title="28 novas cartas da Princesa Celestia">
+                    <i class="fa fa-bell text-secondary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
+                        28
+                    </span>
+                </div>
+                <div title="Mensagens via Spike">
+                    <i class="fa fa-message text-secondary"></i>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown">
+                        <span class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center fw-bold" style="width: 35px; height: 35px; background-color: #9b59b6 !important;">
+                            TS
+                        </span>
+                        <span class="d-none d-sm-inline small fw-semibold">Twilight Sparkle</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Perfil (Princesa da Amizade)</a></li>
+                        <li><a class="dropdown-item" href="#">Boletim de Equestria</a></li>
+                        <li><a class="dropdown-item" href="#">Calendário de Festivais</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gaveta Lateral (Drawer) -->
+    <aside class="sidebar-drawer">
+        <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice do Curso</h6>
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-book-open me-2 text-primary"></i> Geral: Bem-vindo a Ponyville
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-gem me-2 text-info"></i> Módulo 1: Os 6 Elementos
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-wand-magic-sparkles me-2 text-warning"></i> Módulo 2: Feitiços de Starswirl
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-map me-2 text-success"></i> Módulo 3: Mapa Cutie
+            </a>
+            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--mlp-purple); border-color: var(--mlp-purple);">
+                <i class="fa-solid fa-award me-2"></i> Competências do curso
+            </a>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal (#maincontent) -->
+    <main id="maincontent" class="main-content">
+        <div class="container-fluid">
+            <!-- Cabeçalho do Curso -->
+            <div class="card shadow-sm mb-4 border-0">
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb small mb-2">
+                            <li class="breadcrumb-item"><a href="#">Meus cursos</a></li>
+                            <li class="breadcrumb-item"><a href="#">EST-101: Estudos Avançados da Amizade</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Competências</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                        <div>
+                            <h1 class="h3 mb-1 fw-bold" style="color: var(--mlp-purple);">Competências do curso</h1>
+                            <p class="text-muted mb-0">Estrutura de aprendizagem: <strong>Diretrizes Reais de Canterlot (Ano 1000)</strong></p>
+                        </div>
+                        <button class="btn btn-mlp" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
+                            <i class="fa-solid fa-plus me-1"></i> Adicionar competências ao curso
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de Progresso Geral -->
+            <div class="card shadow-sm mb-4 border-0">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span class="fw-semibold">Progresso nos Elementos da Harmonia</span>
+                        <span class="fw-bold text-success">5 de 6 competências concluídas (83%)</span>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 83%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de Competências (Os 6 Elementos) -->
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                    <h2 class="h5 mb-0 fw-bold">Competências vinculadas a este curso</h2>
+                    <span class="badge bg-secondary">6 competências</span>
+                </div>
+                <div class="card-body d-flex flex-column gap-3">
+
+                    <!-- Competência 1: Honestidade -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #fd7e14;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-01</span>
+                                    <h3 class="h6 fw-bold mb-1">Elemento da Honestidade (Applejack)</h3>
+                                    <p class="small text-muted mb-2">Capacidade de manter a integridade, cumprir promessas e falar a verdade mesmo em situações difíceis no Rancho Maçã Doce.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-file-pen text-primary me-1"></i> Tarefa: Colheita de Maçãs</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 2: Bondade -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #f783ac;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-02</span>
+                                    <h3 class="h6 fw-bold mb-1">Elemento da Bondade (Fluttershy)</h3>
+                                    <p class="small text-muted mb-2">Demonstrar empatia, paciência e cuidado com todas as criaturas de Equestria, incluindo dragões e manticoras.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-comments text-info me-1"></i> Fórum: Cuidados na Floresta Everfree</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 3: Riso -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #e83e8c;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-03</span>
+                                    <h3 class="h6 fw-bold mb-1">Elemento do Riso / Alegria (Pinkie Pie)</h3>
+                                    <p class="small text-muted mb-2">Promover o otimismo, aliviar tensões sociais e organizar celebrações comunitárias na Sugarcube Corner.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-list-check text-warning me-1"></i> Questionário: Planejamento de Festas</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 4: Generosidade -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #6f42c1;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-04</span>
+                                    <h3 class="h6 fw-bold mb-1">Elemento da Generosidade (Rarity)</h3>
+                                    <p class="small text-muted mb-2">Compartilhar talentos, recursos e tempo sem esperar recompensas materiais em troca.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-shirt text-purple me-1"></i> Laboratório: Alta Costura de Canterlot</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 5: Lealdade -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #0dcaf0;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-05</span>
+                                    <h3 class="h6 fw-bold mb-1">Elemento da Lealdade (Rainbow Dash)</h3>
+                                    <p class="small text-muted mb-2">Permanecer fiel aos amigos frente a desafios extremos, mantendo a coragem e a velocidade de resposta.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-bolt text-warning me-1"></i> Simulação: Arco-Íris Sônico</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 6: Magia -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #d63384;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-06</span>
+                                    <h3 class="h6 fw-bold mb-1">Elemento da Magia (Twilight Sparkle)</h3>
+                                    <p class="small text-muted mb-2">Sintetizar todos os outros elementos através do estudo contínuo, liderança colaborativa e envio de relatórios à Princesa Celestia.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-scroll text-danger me-1"></i> TCC: Carta Final sobre a Amizade</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-warning text-dark"><i class="fa-solid fa-clock me-1"></i> Em avaliação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Exemplo (Adicionar Competência) -->
+    <div class="modal fade" id="addCompetencyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Seletor de Competências de Equestria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="form-label small fw-bold">Escolha uma competência extra:</label>
+                    <select class="form-select">
+                        <option>MLP-EXT-01: Controle do Caos (Discórdia)</option>
+                        <option>MLP-EXT-02: Magia do Amor (Princesa Cadance)</option>
+                        <option>MLP-EXT-03: Guarda dos Sonhos (Princesa Luna)</option>
+                        <option>MLP-EXT-04: Descoberta de Cutie Marks (Cutie Mark Crusaders)</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-mlp" data-bs-dismiss="modal">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
