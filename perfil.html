@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Bodt: Perfil público | AVA - 104º Esquadrão de Cadetes</title>
+    <!-- Bootstrap 5 & FontAwesome para reproduzir o tema Boost do Moodle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --marco-rose: #8b2635;
+            --marco-brown: #5c4033;
+            --marco-gold: #c59b27;
+            --marco-bg: #f6f3f2;
+        }
+        body {
+            background-color: var(--marco-bg);
+            padding-top: 64px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .navbar {
+            border-bottom: 3px solid var(--marco-rose);
+            box-shadow: 0 2px 10px rgba(139, 38, 53, 0.15);
+        }
+        .navbar-brand {
+            color: var(--marco-rose) !important;
+            font-weight: 800;
+        }
+        .main-container {
+            max-width: 1140px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .profile-avatar-nav {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 2px solid var(--marco-gold);
+        }
+        .profile-avatar-lg {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 4px solid var(--marco-rose);
+            box-shadow: 0 4px 12px rgba(139, 38, 53, 0.25);
+        }
+        .profile-card {
+            border: 1px solid #e2d8d8;
+            border-radius: 0.65rem;
+            background: #fff;
+            height: 100%;
+        }
+        .profile-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--marco-rose);
+            border-bottom: 2px solid #f9ebed;
+            padding-bottom: 0.6rem;
+            margin-bottom: 1rem;
+        }
+        .btn-marco {
+            background-color: var(--marco-rose);
+            color: #fff;
+            border: 1px solid var(--marco-brown);
+        }
+        .btn-marco:hover {
+            background-color: var(--marco-brown);
+            color: #fff;
+        }
+        .badge-cadet {
+            background-color: #f9ebed;
+            color: var(--marco-rose);
+            border: 1px solid #dfb6bc;
+        }
+        .form-check-input:checked {
+            background-color: var(--marco-rose);
+            border-color: var(--marco-rose);
+        }
+    </style>
+</head>
+<body id="page-user-profile" class="limitedwidth format-site path-user pagelayout-mypublic">
+
+    <!-- Barra de Navegação Superior com Links de Retorno para index.html -->
+    <nav class="navbar fixed-top bg-white navbar-expand" aria-label="Navegação no site">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
+                <i class="fa-solid fa-rose me-2" style="color: var(--marco-rose);"></i> AVA - 104º Esquadrão
+            </a>
+
+            <div class="primary-navigation">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Página inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Painel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Meus cursos</a></li>
+                </ul>
+            </div>
+
+            <div id="usernavigation" class="navbar-nav ms-auto align-items-center gap-3">
+                <!-- Notificações (26 novas) -->
+                <div class="position-relative" title="26 comunicados da Guarda Estacionária">
+                    <i class="fa fa-bell text-secondary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
+                        26
+                    </span>
+                </div>
+
+                <!-- Mensagens (1 conversa não lida) -->
+                <div class="position-relative" title="1 mensagem não lida de Jean Kirstein">
+                    <i class="fa fa-message text-secondary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" style="font-size: 0.65rem;">
+                        1
+                    </span>
+                </div>
+
+                <!-- Menu do Usuário -->
+                <div class="dropdown">
+                    <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2 py-1" data-bs-toggle="dropdown">
+                        <img src="https://i.pinimg.com/736x/19/fc/fc/19fcfca39f4e50bc2a349095dacafe54.jpg" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=MarcoBodt&backgroundColor=8b2635';" 
+                             alt="Marco Bodt" 
+                             class="profile-avatar-nav">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow">
+                        <li><a class="dropdown-item active" style="background-color: var(--marco-rose);" href="perfil.html">Perfil</a></li>
+                        <li><a class="dropdown-item" href="index.html">Competências do curso</a></li>
+                        <li><a class="dropdown-item" href="#">Notas</a></li>
+                        <li><a class="dropdown-item" href="#">Calendário</a></li>
+                        <li><a class="dropdown-item" href="#">Arquivos privados</a></li>
+                        <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Preferências</a></li>
+                        <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
+                    </ul>
+                </div>
+
+                <div class="vr mx-1 d-none d-md-block"></div>
+
+                <!-- Switch Modo de Edição -->
+                <div class="d-none d-md-flex align-items-center">
+                    <label class="me-2 mb-0 small fw-semibold text-secondary" for="editingswitch">Modo de edição</label>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="editingswitch">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal: Perfil Público -->
+    <main id="maincontent" class="main-container">
+        
+        <!-- Breadcrumb + Botão Voltar -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb small mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">GRD-104</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Perfil público</li>
+                </ol>
+            </nav>
+            <a href="index.html" class="btn btn-sm btn-outline-secondary">
+                <i class="fa-solid fa-arrow-left me-1"></i> Voltar às Competências
+            </a>
+        </div>
+
+        <!-- Cabeçalho do Perfil -->
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                    <div class="d-flex align-items-center gap-4">
+                        <img src="https://i.pinimg.com/736x/19/fc/fc/19fcfca39f4e50bc2a349095dacafe54.jpg" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=MarcoBodt&backgroundColor=8b2635';" 
+                             alt="Marco Bodt" 
+                             class="profile-avatar-lg">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <h1 class="h3 fw-bold mb-0" style="color: var(--marco-rose);">MARCO BODT</h1>
+                                <span class="badge badge-cadet"><i class="fa-solid fa-medal me-1"></i> 7º Colocado • 104º Esquadrão</span>
+                            </div>
+                            <p class="text-muted mb-2 mt-1">Líder do 19º Esquadrão • Guarda Estacionária (Distrito de Trost)</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-marco"><i class="fa-solid fa-envelope me-1"></i> Enviar mensagem</button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-user-plus me-1"></i> Adicionar ao esquadrão</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-md-end">
+                        <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2">
+                            <i class="fa-solid fa-circle fa-2xs me-1"></i> Em serviço (Distrito de Trost)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de Blocos do Perfil Moodle -->
+        <div class="row g-4">
+            
+            <!-- Coluna Esquerda -->
+            <div class="col-md-6">
+                <div class="profile-card p-4 shadow-sm">
+                    <h3><i class="fa-solid fa-address-card me-2" style="color: var(--marco-rose);"></i> Detalhes do usuário</h3>
+                    <dl class="row mb-0 small">
+                        <dt class="col-sm-4 text-muted">Endereço de e-mail</dt>
+                        <dd class="col-sm-8"><a href="mailto:marco.bodt@esquadrao104.paradis" class="text-decoration-none">marco.bodt@esquadrao104.paradis</a></dd>
+
+                        <dt class="col-sm-4 text-muted">Região de origem</dt>
+                        <dd class="col-sm-8">Distrito de Jinae (Muralha Rose - Lado Sul)</dd>
+
+                        <dt class="col-sm-4 text-muted">Guarnição atual</dt>
+                        <dd class="col-sm-8">Distrito de Trost • 19º Esquadrão de Cadetes</dd>
+
+                        <dt class="col-sm-4 text-muted">Fuso horário</dt>
+                        <dd class="col-sm-8">Horário Padrão de Paradis (Ano 850)</dd>
+
+                        <dt class="col-sm-4 text-muted">Descrição</dt>
+                        <dd class="col-sm-8 mb-0">
+                            "Graduado em 7º lugar no 104º Esquadrão de Cadetes. Acredito que a verdadeira força de uma unidade vem da cooperação, da confiança mútua e de enxergar o melhor em cada companheiro. Meu objetivo é servir com honra e proteger os cidadãos das muralhas."
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- Coluna Direita -->
+            <div class="col-md-6">
+                <div class="profile-card p-4 shadow-sm">
+                    <h3><i class="fa-solid fa-book-bookmark me-2" style="color: var(--marco-rose);"></i> Detalhes do curso</h3>
+                    <p class="small text-muted fw-bold mb-2">Perfis de curso ativos:</p>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                            <a href="index.html" class="text-decoration-none fw-semibold" style="color: var(--marco-rose);">GRD-104: Comando de Esquadrão, Logística e Defesa de Trost</a>
+                            <span class="badge bg-primary-subtle text-primary">Monitor</span>
+                        </li>
+                        <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                            <a href="index.html" class="text-decoration-none fw-semibold" style="color: var(--marco-rose);">DMT-101: Operação de Equipamento Tridimensional</a>
+                            <span class="badge bg-success-subtle text-success">Concluído</span>
+                        </li>
+                        <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                            <a href="index.html" class="text-decoration-none fw-semibold" style="color: var(--marco-rose);">ADM-200: Gestão Pública e Protocolos da Capital</a>
+                            <span class="badge bg-warning-subtle text-dark">Em andamento</span>
+                        </li>
+                        <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                            <a href="index.html" class="text-decoration-none fw-semibold" style="color: var(--marco-rose);">TAT-305: Estratégias de Cobertura e Resgate Urbano</a>
+                            <span class="badge bg-success-subtle text-success">Concluído</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Linha Inferior Esquerda: Privacidade e Políticas -->
+            <div class="col-md-4">
+                <div class="profile-card p-4 shadow-sm">
+                    <h3><i class="fa-solid fa-shield-halved me-2" style="color: var(--marco-rose);"></i> Privacidade e políticas</h3>
+                    <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+                        <li><a href="#" class="text-decoration-none"><i class="fa-solid fa-file-contract me-2 text-muted"></i> Código de conduta do 104º Esquadrão</a></li>
+                        <li><a href="#" class="text-decoration-none"><i class="fa-solid fa-eye-slash me-2 text-muted"></i> Diretrizes de comunicação militar</a></li>
+                        <li><a href="index.html" class="text-decoration-none"><i class="fa-solid fa-award me-2 text-muted"></i> Planos de aprendizagem e competências</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Linha Inferior Meio: Relatórios -->
+            <div class="col-md-4">
+                <div class="profile-card p-4 shadow-sm">
+                    <h3><i class="fa-solid fa-chart-line me-2" style="color: var(--marco-rose);"></i> Relatórios</h3>
+                    <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+                        <li><a href="#" class="text-decoration-none"><i class="fa-solid fa-clock-rotate-left me-2 text-muted"></i> Logs de hoje (Guarnição de Trost)</a></li>
+                        <li><a href="#" class="text-decoration-none"><i class="fa-solid fa-list-ul me-2 text-muted"></i> Todos os registros de treinamento</a></li>
+                        <li><a href="#" class="text-decoration-none"><i class="fa-solid fa-table-list me-2 text-muted"></i> Boletim de graduação (Top 10)</a></li>
+                        <li><a href="#" class="text-decoration-none"><i class="fa-solid fa-star me-2 text-muted"></i> Sessões do Quartel-General</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Linha Inferior Direita: Atividade de Acesso -->
+            <div class="col-md-4">
+                <div class="profile-card p-4 shadow-sm">
+                    <h3><i class="fa-solid fa-key me-2" style="color: var(--marco-rose);"></i> Atividade de acesso</h3>
+                    <div class="small mb-3">
+                        <div class="fw-bold text-muted">Primeiro acesso ao site</div>
+                        <div>Segunda-feira, 10 abr. 847, 07:00 <span class="text-muted">(Ingresso no 104º)</span></div>
+                    </div>
+                    <div class="small mb-0">
+                        <div class="fw-bold text-muted">Último acesso ao site</div>
+                        <div>Hoje, 13:56 <span class="badge bg-light text-dark border ms-1">agora</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
