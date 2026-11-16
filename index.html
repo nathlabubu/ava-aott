@@ -3,37 +3,39 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competências do curso: Magia da Amizade | AVA - Escola de Equestria</title>
+    <title>Competências do curso: Liderança de Esquadrão & Tática | AVA - 104º Esquadrão de Cadetes</title>
     <!-- Bootstrap 5 & FontAwesome para reproduzir o tema Boost do Moodle -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
-            --mlp-purple: #6f42c1;
-            --mlp-pink: #e83e8c;
-            --mlp-light-bg: #fdf8ff;
+            --marco-rose: #8b2635;
+            --marco-brown: #5c4033;
+            --marco-gold: #c59b27;
+            --marco-bg: #f6f3f2;
         }
         body {
-            background-color: var(--mlp-light-bg);
-            padding-top: 60px;
+            background-color: var(--marco-bg);
+            padding-top: 64px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
         .navbar {
-            border-bottom: 2px solid var(--mlp-pink);
-            box-shadow: 0 2px 6px rgba(111, 66, 193, 0.1);
+            border-bottom: 3px solid var(--marco-rose);
+            box-shadow: 0 2px 10px rgba(139, 38, 53, 0.15);
         }
         .navbar-brand {
-            color: var(--mlp-purple) !important;
-            font-weight: 700;
+            color: var(--marco-rose) !important;
+            font-weight: 800;
+            letter-spacing: 0.3px;
         }
         .sidebar-drawer {
             width: 260px;
             position: fixed;
-            top: 58px;
+            top: 63px;
             bottom: 0;
             left: 0;
             background: #fff;
-            border-right: 1px solid #dee2e6;
+            border-right: 1px solid #e2d8d8;
             padding: 1rem;
             overflow-y: auto;
             z-index: 1000;
@@ -47,74 +49,107 @@
             .main-content { margin-left: 0; }
         }
         .competency-card {
-            border-left: 5px solid var(--mlp-purple);
+            border-left: 5px solid var(--marco-rose);
             transition: transform 0.15s ease;
         }
         .competency-card:hover {
             transform: translateY(-2px);
         }
-        .badge-cutiemark {
-            background-color: #f3e8ff;
-            color: var(--mlp-purple);
-            border: 1px solid #d8b4fe;
+        .badge-garrison {
+            background-color: #f9ebed;
+            color: var(--marco-rose);
+            border: 1px solid #dfb6bc;
+            font-family: monospace;
         }
-        .btn-mlp {
-            background-color: var(--mlp-purple);
+        .btn-marco {
+            background-color: var(--marco-rose);
             color: #fff;
+            border: 2px solid var(--marco-brown);
         }
-        .btn-mlp:hover {
-            background-color: #59339d;
+        .btn-marco:hover {
+            background-color: var(--marco-brown);
             color: #fff;
+            border-color: var(--marco-rose);
+        }
+        .marco-avatar {
+            width: 38px;
+            height: 38px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 2px solid var(--marco-gold);
+            background-color: var(--marco-rose);
+        }
+        .marco-profile-card-img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 3px solid var(--marco-rose);
+            background-color: var(--marco-brown);
+        }
+        .cadet-tag {
+            font-weight: 800;
+            color: var(--marco-rose);
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body id="page-admin-tool-lp-coursecompetencies" class="format-topics pagelayout-incourse">
 
-    <!-- Barra de Navegação Superior (Baseada no seu código) -->
+    <!-- Barra de Navegação Superior -->
     <nav class="navbar fixed-top bg-white navbar-expand" aria-label="Navegação no site">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
-                <i class="fa-solid fa-star text-warning me-2"></i> AVA - Escola da Amizade
+            <a href="index.html" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
+                <i class="fa-solid fa-rose me-2" style="color: var(--marco-rose);"></i>
+                <i class="fa-solid fa-shield-halved me-2" style="color: var(--marco-brown);"></i> AVA - 104º Esquadrão (Guarda Estacionária)
             </a>
 
             <div class="primary-navigation">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Página inicial</a>
+                        <a class="nav-link" href="index.html">Página inicial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Painel</a>
+                        <a class="nav-link" href="index.html">Painel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold text-primary" href="#">Meus cursos</a>
+                        <a class="nav-link active fw-bold" style="color: var(--marco-rose);" href="index.html">Meus cursos</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Menu do Usuário / Notificações -->
+            <!-- Menu do Usuário com Link para perfil.html -->
             <div id="usernavigation" class="navbar-nav ms-auto align-items-center gap-3">
-                <div class="position-relative" title="28 novas cartas da Princesa Celestia">
+                <div class="position-relative" title="28 comunicados do Distrito de Trost">
                     <i class="fa fa-bell text-secondary"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
                         28
                     </span>
                 </div>
-                <div title="Mensagens via Spike">
+                <div title="Mensagens de Jean Kirstein">
                     <i class="fa fa-message text-secondary"></i>
                 </div>
                 <div class="dropdown">
-                    <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown">
-                        <span class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center fw-bold" style="width: 35px; height: 35px; background-color: #9b59b6 !important;">
-                            TS
-                        </span>
-                        <span class="d-none d-sm-inline small fw-semibold">Twilight Sparkle</span>
+                    <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2 py-1" data-bs-toggle="dropdown">
+                        <img src="https://i.pinimg.com/736x/19/fc/fc/19fcfca39f4e50bc2a349095dacafe54.jpg" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=MarcoBodt&backgroundColor=8b2635';" 
+                             alt="Marco Bodt" 
+                             class="marco-avatar">
+                        <span class="d-none d-sm-inline small fw-bold" style="color: var(--marco-rose);">Marco Bodt</span>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Perfil (Princesa da Amizade)</a></li>
-                        <li><a class="dropdown-item" href="#">Boletim de Equestria</a></li>
-                        <li><a class="dropdown-item" href="#">Calendário de Festivais</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end shadow">
+                        <li class="px-3 py-2 border-bottom bg-light">
+                            <div class="fw-bold small" style="color: var(--marco-rose);">Marco Bodt</div>
+                            <div class="text-muted" style="font-size: 0.75rem;">7º Colocado • Líder do 19º Esquadrão</div>
+                        </li>
+                        <li><a class="dropdown-item fw-semibold" href="perfil.html"><i class="fa-solid fa-id-badge me-2 text-danger"></i> Perfil</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-chess-king me-2 text-warning"></i> Estratégia: Defesa de Trost</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-users me-2 text-secondary"></i> Relatório de Coesão do Esquadrão</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i> Encerrar Turno (Sair)</a></li>
                     </ul>
                 </div>
             </div>
@@ -123,22 +158,25 @@
 
     <!-- Gaveta Lateral (Drawer) -->
     <aside class="sidebar-drawer">
-        <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice do Curso</h6>
+        <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice da Disciplina</h6>
         <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-book-open me-2 text-primary"></i> Geral: Bem-vindo a Ponyville
+            <a href="index.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-landmark me-2 text-secondary"></i> Geral: Juramento do 104º Esquadrão
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-gem me-2 text-info"></i> Módulo 1: Os 6 Elementos
+            <a href="index.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-people-group me-2 text-danger"></i> Módulo 1: Coesão e Moral de Grupo
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-wand-magic-sparkles me-2 text-warning"></i> Módulo 2: Feitiços de Starswirl
+            <a href="index.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-tower-observation me-2 text-warning"></i> Módulo 2: Defesa das Muralhas
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-map me-2 text-success"></i> Módulo 3: Mapa Cutie
+            <a href="index.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-gas-pump me-2 text-primary"></i> Módulo 3: Logística de Suprimentos
             </a>
-            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--mlp-purple); border-color: var(--mlp-purple);">
-                <i class="fa-solid fa-award me-2"></i> Competências do curso
+            <a href="index.html" class="list-group-item list-group-item-action active" style="background-color: var(--marco-rose); border-color: var(--marco-rose);">
+                <i class="fa-solid fa-award me-2 text-warning"></i> Competências do curso
+            </a>
+            <a href="perfil.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-user me-2" style="color: var(--marco-rose);"></i> Perfil do Líder de Esquadrão
             </a>
         </div>
     </aside>
@@ -146,24 +184,41 @@
     <!-- Conteúdo Principal (#maincontent) -->
     <main id="maincontent" class="main-content">
         <div class="container-fluid">
-            <!-- Cabeçalho do Curso -->
+            <!-- Cabeçalho do Curso com Perfil do Marco -->
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb small mb-2">
-                            <li class="breadcrumb-item"><a href="#">Meus cursos</a></li>
-                            <li class="breadcrumb-item"><a href="#">EST-101: Estudos Avançados da Amizade</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">Meus cursos</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">GRD-104: Comando de Esquadrão, Logística e Defesa de Trost</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Competências</li>
                         </ol>
                     </nav>
-                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
-                        <div>
-                            <h1 class="h3 mb-1 fw-bold" style="color: var(--mlp-purple);">Competências do curso</h1>
-                            <p class="text-muted mb-0">Estrutura de aprendizagem: <strong>Diretrizes Reais de Canterlot (Ano 1000)</strong></p>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="perfil.html" title="Ver perfil público de Marco Bodt">
+                                <img src="https://i.pinimg.com/736x/19/fc/fc/19fcfca39f4e50bc2a349095dacafe54.jpg" 
+                                     referrerpolicy="no-referrer"
+                                     onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=MarcoBodt&backgroundColor=8b2635';" 
+                                     alt="Marco Bodt" 
+                                     class="marco-profile-card-img shadow-sm">
+                            </a>
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <h1 class="h3 mb-1 fw-bold" style="color: var(--marco-rose);">Competências do curso</h1>
+                                    <span class="cadet-tag small">TOP 10 • 104º ESQUADRÃO</span>
+                                </div>
+                                <p class="text-muted mb-0">Monitor Responsável: <a href="perfil.html" class="fw-bold text-decoration-none" style="color: var(--marco-rose);">Marco Bodt</a> • Guarda Estacionária (Distrito de Trost, Ano 850)</p>
+                            </div>
                         </div>
-                        <button class="btn btn-mlp" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
-                            <i class="fa-solid fa-plus me-1"></i> Adicionar competências ao curso
-                        </button>
+                        <div class="d-flex gap-2">
+                            <a href="perfil.html" class="btn btn-outline-secondary">
+                                <i class="fa-solid fa-user me-1"></i> Perfil
+                            </a>
+                            <button class="btn btn-marco" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
+                                <i class="fa-solid fa-plus me-1"></i> Adicionar competências
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,34 +227,34 @@
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body">
                     <div class="d-flex justify-content-between mb-1">
-                        <span class="fw-semibold">Progresso nos Elementos da Harmonia</span>
+                        <span class="fw-semibold">Progresso na Graduação Oficial da Guarda Estacionária</span>
                         <span class="fw-bold text-success">5 de 6 competências concluídas (83%)</span>
                     </div>
                     <div class="progress" style="height: 12px;">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 83%;"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 83%; background-color: var(--marco-rose);"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Lista de Competências (Os 6 Elementos) -->
+            <!-- Lista de Competências (Temática Marco Bodt) -->
             <div class="card shadow-sm border-0">
                 <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                    <h2 class="h5 mb-0 fw-bold">Competências vinculadas a este curso</h2>
-                    <span class="badge bg-secondary">6 competências</span>
+                    <h2 class="h5 mb-0 fw-bold" style="color: var(--marco-rose);">Competências vinculadas a este curso</h2>
+                    <span class="badge text-white" style="background-color: var(--marco-brown);">6 competências</span>
                 </div>
                 <div class="card-body d-flex flex-column gap-3">
 
-                    <!-- Competência 1: Honestidade -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #fd7e14;">
+                    <!-- Competência 1: Liderança Empática -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #8b2635;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-01</span>
-                                    <h3 class="h6 fw-bold mb-1">Elemento da Honestidade (Applejack)</h3>
-                                    <p class="small text-muted mb-2">Capacidade de manter a integridade, cumprir promessas e falar a verdade mesmo em situações difíceis no Rancho Maçã Doce.</p>
+                                    <span class="badge badge-garrison mb-1">GRD-LID-01</span>
+                                    <h3 class="h6 fw-bold mb-1">Liderança Colaborativa e Reconhecimento de Talentos</h3>
+                                    <p class="small text-muted mb-2">Identificar as qualidades de comando nos colegas (como Jean Kirstein) e organizar o esquadrão para que cada integrante atue em sua melhor função.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-file-pen text-primary me-1"></i> Tarefa: Colheita de Maçãs</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-users-gear text-danger me-1"></i> Exercício Prático: Formação do 19º Esquadrão</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -207,17 +262,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 2: Bondade -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #f783ac;">
+                    <!-- Competência 2: Resgate de Suprimentos -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #c59b27;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-02</span>
-                                    <h3 class="h6 fw-bold mb-1">Elemento da Bondade (Fluttershy)</h3>
-                                    <p class="small text-muted mb-2">Demonstrar empatia, paciência e cuidado com todas as criaturas de Equestria, incluindo dragões e manticoras.</p>
+                                    <span class="badge badge-garrison mb-1">GRD-LOG-02</span>
+                                    <h3 class="h6 fw-bold mb-1">Infiltração e Retomada do Quartel-General de Suprimentos</h3>
+                                    <p class="small text-muted mb-2">Executar operações de precisão com rifle e lâminas em ambientes fechados para restabelecer o reabastecimento de gás e lâminas da tropa.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-comments text-info me-1"></i> Fórum: Cuidados na Floresta Everfree</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-crosshairs text-warning me-1"></i> Operação Tática: Depósito de Trost</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -225,17 +280,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 3: Riso -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #e83e8c;">
+                    <!-- Competência 3: Isca e Distração Coordenada -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #5c4033;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-03</span>
-                                    <h3 class="h6 fw-bold mb-1">Elemento do Riso / Alegria (Pinkie Pie)</h3>
-                                    <p class="small text-muted mb-2">Promover o otimismo, aliviar tensões sociais e organizar celebrações comunitárias na Sugarcube Corner.</p>
+                                    <span class="badge badge-garrison mb-1">GRD-TAT-03</span>
+                                    <h3 class="h6 fw-bold mb-1">Manobras de Distração e Cobertura Aérea</h3>
+                                    <p class="small text-muted mb-2">Atrair a atenção de Titãs de 10m a 15m com segurança calculada para abrir brechas de ataque limpas para os companheiros de equipe.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-list-check text-warning me-1"></i> Questionário: Planejamento de Festas</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-wind text-primary me-1"></i> Simulação: Escolta da Rocha em Trost</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -243,17 +298,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 4: Generosidade -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #6f42c1;">
+                    <!-- Competência 4: Leitura de Situação e Observação -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #1e40af;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-04</span>
-                                    <h3 class="h6 fw-bold mb-1">Elemento da Generosidade (Rarity)</h3>
-                                    <p class="small text-muted mb-2">Compartilhar talentos, recursos e tempo sem esperar recompensas materiais em troca.</p>
+                                    <span class="badge badge-garrison mb-1">GRD-ANA-04</span>
+                                    <h3 class="h6 fw-bold mb-1">Análise Crítica e Inteligência de Campo</h3>
+                                    <p class="small text-muted mb-2">Manter a calma em situações críticas, detectar inconsistências nas operações e priorizar o diálogo para resolver conflitos internos.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-shirt text-purple me-1"></i> Laboratório: Alta Costura de Canterlot</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-magnifying-glass text-info me-1"></i> Estudo de Caso: Relatório de Inspeção de Equipamentos</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -261,17 +316,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 5: Lealdade -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #0dcaf0;">
+                    <!-- Competência 5: Artilharia de Muralha -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #374151;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-05</span>
-                                    <h3 class="h6 fw-bold mb-1">Elemento da Lealdade (Rainbow Dash)</h3>
-                                    <p class="small text-muted mb-2">Permanecer fiel aos amigos frente a desafios extremos, mantendo a coragem e a velocidade de resposta.</p>
+                                    <span class="badge badge-garrison mb-1">GRD-ART-05</span>
+                                    <h3 class="h6 fw-bold mb-1">Operação de Canhões Fixos e Defesa Perimetral</h3>
+                                    <p class="small text-muted mb-2">Calcular ângulos de disparo sobre a Muralha Rose e coordenar o tempo de recarga das baterias da Guarda Estacionária.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-bolt text-warning me-1"></i> Simulação: Arco-Íris Sônico</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-shield text-secondary me-1"></i> Prova Prática: Bateria Sul de Trost</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -279,17 +334,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 6: Magia -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #d63384;">
+                    <!-- Competência 6: Serviço à Capital / Polícia Militar -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #047857;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-cutiemark mb-1">MLP-ELM-06</span>
-                                    <h3 class="h6 fw-bold mb-1">Elemento da Magia (Twilight Sparkle)</h3>
-                                    <p class="small text-muted mb-2">Sintetizar todos os outros elementos através do estudo contínuo, liderança colaborativa e envio de relatórios à Princesa Celestia.</p>
+                                    <span class="badge badge-garrison mb-1">GRD-GOV-06</span>
+                                    <h3 class="h6 fw-bold mb-1">Administração Civil e Serviço Direto ao Rei</h3>
+                                    <p class="small text-muted mb-2">Aplicar os conhecimentos adquiridos no Top 10 dos cadetes para organizar a segurança urbana e proteger os cidadãos com integridade.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-scroll text-danger me-1"></i> TCC: Carta Final sobre a Amizade</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-scroll text-success me-1"></i> Avaliação Final: Projeto de Reformulação Administrativa</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-warning text-dark"><i class="fa-solid fa-clock me-1"></i> Em avaliação</span>
@@ -307,21 +362,21 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Seletor de Competências de Equestria</h5>
+                    <h5 class="modal-title">Registro do 104º Esquadrão</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <label class="form-label small fw-bold">Escolha uma competência extra:</label>
+                    <label class="form-label small fw-bold">Selecione uma competência militar:</label>
                     <select class="form-select">
-                        <option>MLP-EXT-01: Controle do Caos (Discórdia)</option>
-                        <option>MLP-EXT-02: Magia do Amor (Princesa Cadance)</option>
-                        <option>MLP-EXT-03: Guarda dos Sonhos (Princesa Luna)</option>
-                        <option>MLP-EXT-04: Descoberta de Cutie Marks (Cutie Mark Crusaders)</option>
+                        <option>GRD-EXT-01: Planejamento de Evacuação de Civis</option>
+                        <option>GRD-EXT-02: Mediação de Conflitos e Trabalho em Equipe</option>
+                        <option>GRD-EXT-03: Manutenção Preventiva do DMT</option>
+                        <option>GRD-EXT-04: Treinamento de Cadetes Recrutas</option>
                     </select>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-mlp" data-bs-dismiss="modal">Adicionar</button>
+                    <button type="button" class="btn btn-marco" data-bs-dismiss="modal">Adicionar</button>
                 </div>
             </div>
         </div>
